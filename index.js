@@ -14,6 +14,7 @@ app.use(express.json());
 app.use('/api', taskRoutes);
 app.use('/api', userRoutes);
 
+console.log('Attempting to connect to MongoDB..')
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
